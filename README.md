@@ -3,6 +3,7 @@ A simple auto-login solution for those who don't want to type in their password 
 
 
 ## Installation
+- <a href="https://www.python.org/downloads/">Install Python</a>
 - Extract the contents of the archived file.  
 - Execute **install_dependencies.bat**
 
