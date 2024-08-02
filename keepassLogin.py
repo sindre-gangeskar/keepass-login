@@ -27,18 +27,22 @@ try:
     if not window:
         print('Failed to find window')
         exit(2)
-    else:
+    
+    window.activate()
+    time.sleep(1)
+    
+    for char in password:
         focused_window = pygetwindow.getActiveWindow()
         if focused_window and expected_window_title in focused_window.title:
-            window.activate();
-            pyautogui.typewrite(password, interval=0.025)
-            pyautogui.press('enter')
-            print("Database unlocked successfully!")
+            pyautogui.typewrite(char, interval=0.1)
+            
         else: 
-            print('No window with KeePassXC detected')
-            exit(2)
+            print('KeePassXC Window lost focus, refocusing...')
+            window.activate()
+            time.sleep(0.5)
+            pyautogui.typewrite(char, interval=0.1)
         
+    pyautogui.press('enter')
+
 except Exception as e: 
     print(f'Failed to open the database {e}')
-
-input("Press any key to exit")
