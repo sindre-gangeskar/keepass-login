@@ -29,7 +29,7 @@ PASSWORD = "P@ssword"
 ```
 
 ## How to use
-After the dependencies have been installed, you can create a startup shortcut for Windows and place it in your Windows startup folder for it to automatically open KeePassXC for you and exectute the login process. 
+After the dependencies have been installed, you can create a startup shortcut and place it in your startup folder for it to automatically open KeePassXC for you and execute the login process.
 
 - Create a shortcut of **run_auto_login.bat**
 - Press Win+r and type ``` shell:startup ``` and paste the shortcut in that folder. 
